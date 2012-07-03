@@ -1,1 +1,1 @@
-A quick proto of recognizing users with webcam and face.com REST API. Of course, there is no security at all because this is a pure client-side Vaadin += GWT application. Works with Google Chrome but MediaStream must be enabled from chrome://flags/.
+A quick proto of recognizing users with webcam and face.com REST API. This is a pure client-side Vaadin += GWT application using Vaadin 7 alpha 3. Works with Google Chrome but MediaStream must be enabled from chrome://flags/.
