@@ -1,0 +1,14 @@
+video {
+	width: 640px;
+	height: 480px;
+	border: 3px solid white;
+}
+
+canvas {
+	width: 640px;
+	height: 480px;
+	border: 3px solid red;
+	transition: border .25s ease-in-out;
+	-moz-transition: border .25s ease-in-out;
+	-webkit-transition: border .25s ease-in-out;
+}

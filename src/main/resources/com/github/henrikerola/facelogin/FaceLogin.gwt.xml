@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='FaceLogin'>
+  <inherits name='com.google.gwt.user.User' />
+
+  <inherits name='com.google.gwt.junit.JUnit' />
+
+  <inherits name='com.google.gwt.user.theme.standard.Standard' />
+  
+  <inherits name='elemental.Elemental' />
+
+  <entry-point class='com.github.henrikerola.facelogin.client.FaceLogin' />
+
+  <source path='client' />
+
+</module>
