@@ -50,7 +50,7 @@ public class LoginView extends Composite {
 				scheduleTakePhoto();
 			}
 		});
-		loginButton.setVisible(false);
+		//loginButton.setVisible(false);
 		panel.add(loginButton);
 	}
 
@@ -91,7 +91,7 @@ public class LoginView extends Composite {
 						takePhoto();
 					} else {
 						Window.alert("Login failed, please try again!");
-						loginButton.setVisible(true);
+						//loginButton.setVisible(true);
 						photoCnt = 0;
 					}
 				}

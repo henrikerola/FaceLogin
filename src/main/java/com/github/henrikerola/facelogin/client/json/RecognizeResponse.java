@@ -20,11 +20,11 @@ public class RecognizeResponse extends BaseResponse {
 	public final native String getGender() /*-{
 		return this.photos[0].tags[0].attributes.gender.value;
 	}-*/;
-	
+
 	public final native boolean getGlasses() /*-{
 		return this.photos[0].tags[0].attributes.glasses.value;
 	}-*/;
-	
+
 	public final native boolean getSmiling() /*-{
 		return this.photos[0].tags[0].attributes.smiling.value;
 	}-*/;
@@ -39,9 +39,20 @@ public class RecognizeResponse extends BaseResponse {
 
 		if (stuff.photos.length == 1 && stuff.photos[0].tags
 				&& stuff.photos[0].tags.length == 1
-				&& stuff.photos[0].tags[0].uids
-				&& stuff.photos[0].tags[0].uids.length == 1) {
-			return stuff;
+				&& stuff.photos[0].tags[0].uids) {
+			if (stuff.photos[0].tags[0].uids.length == 1) {
+				return stuff;
+			} else {
+				var cnt = 0;
+				for (var i = 0; i < stuff.photos[0].tags[0].uids.length; i++) {
+					if (stuff.photos[0].tags[0].uids[i].confidence > 80) {
+					 	cnt++;	
+					}
+				}
+				if (cnt == 1) {
+					return stuff;
+				}
+			}
 		}
 
 		return null;
